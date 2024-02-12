@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background"
-    tools:context=".MainActivity">
+    android:background="@color/button_req"
+    tools:context=".AuthActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inter_bold"
-        android:text="Создайте аккаунт"
+        android:text="Авторизация"
         android:textColor="@color/white"
         android:layout_gravity="center"
         android:layout_marginTop="220dp"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/user_login"
+        android:id="@+id/user_login_auth"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -36,19 +36,7 @@
         android:textColor="@color/white"/>
 
     <EditText
-        android:id="@+id/user_email"
-        android:layout_width="220dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="20dp"
-        android:hint="Введите email"
-        android:layout_gravity="center"
-        android:textColorHint="@color/hint"
-        android:textColor="@color/white"/>
-
-    <EditText
-        android:id="@+id/user_pass"
+        android:id="@+id/user_pass_auth"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -60,26 +48,26 @@
         android:textColor="@color/white"/>
 
     <Button
-        android:id="@+id/button_req"
+        android:id="@+id/button_req_auth"
         android:layout_marginTop="20dp"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:layout_gravity="center"
-        android:backgroundTint="@color/button_req"
+        android:backgroundTint="@color/background"
         android:textSize="16dp"
-        android:textColor="@color/black"
-        android:text="Регистрация" />
+        android:textColor="@color/white"
+        android:text="Войти" />
 
     <TextView
-        android:id="@+id/link_to_auth"
+        android:id="@+id/link_to_req"
         android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="120dp"
         android:fontFamily="@font/inter"
-        android:text="Авторизоваться "
+        android:text="Зарегистрироваться "
 
         android:textColor="@color/white"
         android:textSize="17dp"
