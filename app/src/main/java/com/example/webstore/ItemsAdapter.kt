@@ -1,9 +1,11 @@
 package com.example.webstore
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +17,7 @@ class ItemsAdapter(var items: List<Item>, var context: Context): RecyclerView.Ad
         val title: TextView = view.findViewById(R.id.item_list_title)
         val desc: TextView = view.findViewById(R.id.item_list_desc)
         val price: TextView = view.findViewById(R.id.item_list_price)
+        val button: Button = view.findViewById(R.id.item_list_button)
 
 
     }
@@ -35,6 +38,16 @@ class ItemsAdapter(var items: List<Item>, var context: Context): RecyclerView.Ad
 
         val imageId = context.resources.getIdentifier(items[position].image,"drawable", context.packageName)
         holder.image.setImageResource(imageId)
+
+        holder.button.setOnClickListener {
+            val intent = Intent(context, ItemActivity::class.java)
+            intent.putExtra("ItemTitle", items[position].title)
+            intent.putExtra("ItemText", items[position].text)
+            intent.putExtra("ItemImage", items[position].image)
+            intent.putExtra("ItemPrice", items[position].price)
+
+            context.startActivity(intent)
+        }
 
     }
 
